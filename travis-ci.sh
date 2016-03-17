@@ -1,5 +1,7 @@
 #!/bin/sh -ex
 
+CC=gcc
+
 case "$CC" in
   gcc)
     ENABLE_GCC_WERROR=--enable-gcc-Werror
@@ -50,3 +52,5 @@ if [ "$CC:${TARGET-}" = 'gcc:x86_64' ]; then
 	make -k $j check VERBOSE=${VERBOSE-}
 	codecov --gcov-args=-abcp ||:
 fi
+
+
