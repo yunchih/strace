@@ -3,7 +3,7 @@ sudo: required
 language: generic
 
 env:
-  # - ARCH=amd64   
+  - ARCH=amd64   
   - ARCH=i386    QEMU_BIN=i386
   - ARCH=armhf   QEMU_BIN=arm
   - ARCH=s390x   QEMU_BIN=s390x
